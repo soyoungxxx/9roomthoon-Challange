@@ -5,23 +5,11 @@ class Main {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int T = Integer.parseInt(br.readLine());
-		StringTokenizer st;
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int w = Integer.parseInt(st.nextToken());
+		int r = Integer.parseInt(st.nextToken());
 		
-		int sum = 0;
-		
-		for (int i = 0; i < T; i++) {
-			st = new StringTokenizer(br.readLine());
-			int a = Integer.parseInt(st.nextToken());
-			String oper = st.nextToken();
-			int b = Integer.parseInt(st.nextToken());
-			
-			if (oper.equals("+")) sum += a + b;
-			else if (oper.equals("-")) sum += a - b;
-			else if (oper.equals("*")) sum += a * b;
-			else sum += a / b;
-		}
-		
-		System.out.println(sum);
+		double res = (double)w * (1 + ((double)r / 30));
+		System.out.println((int)res);
 	}
 }
