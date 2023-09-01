@@ -16,9 +16,6 @@ class Main {
 		}
 		// 간선 저장하는 배열 edges
 		
-		Arrays.sort(edges, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
-		// 오름차순 정렬
-		
 		boolean[] visited = new boolean[N+1];
 		
 		ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
